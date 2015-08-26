@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A263e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SNS_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRb-UZ-tIt">
+                                <rect key="frame" x="255" y="152" width="150" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Gkp-Ac-oK9"/>
+                                    <constraint firstAttribute="height" constant="30" id="OXe-qc-Ue1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilx-Gh-obD">
+                                <rect key="frame" x="177" y="151.5" width="51" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EM2-Z9-NyW">
+                                <rect key="frame" x="255" y="264" width="150" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Ewr-qy-1r8"/>
+                                    <constraint firstAttribute="height" constant="30" id="s4D-xj-y20"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="验证码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxk-Yf-fG0">
+                                <rect key="frame" x="177" y="264" width="51" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3F-AW-SCf">
+                                <rect key="frame" x="263" y="212" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="获取验证码"/>
+                                <connections>
+                                    <action selector="GetCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mvq-xA-9jc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLx-VI-9gO">
+                                <rect key="frame" x="263" y="334" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="测试验证码"/>
+                                <connections>
+                                    <action selector="CheckCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MEc-EV-kcx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XLx-VI-9gO" firstAttribute="top" secondItem="EM2-Z9-NyW" secondAttribute="bottom" constant="40" id="0KG-7J-TZC"/>
+                            <constraint firstItem="GRb-UZ-tIt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="132" id="2f0-fh-Kvd"/>
+                            <constraint firstItem="ilx-Gh-obD" firstAttribute="height" secondItem="GRb-UZ-tIt" secondAttribute="height" id="2rA-5A-8NS"/>
+                            <constraint firstItem="EM2-Z9-NyW" firstAttribute="top" secondItem="a3F-AW-SCf" secondAttribute="bottom" constant="22" id="BUx-Pc-MAJ"/>
+                            <constraint firstItem="Zxk-Yf-fG0" firstAttribute="height" secondItem="EM2-Z9-NyW" secondAttribute="height" id="DWJ-o2-fak"/>
+                            <constraint firstItem="GRb-UZ-tIt" firstAttribute="leading" secondItem="ilx-Gh-obD" secondAttribute="trailing" constant="27" id="MDk-HS-PZb"/>
+                            <constraint firstItem="XLx-VI-9gO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TsJ-gq-cjU"/>
+                            <constraint firstItem="EM2-Z9-NyW" firstAttribute="leading" secondItem="Zxk-Yf-fG0" secondAttribute="trailing" constant="27" id="Xe9-8G-rHt"/>
+                            <constraint firstItem="a3F-AW-SCf" firstAttribute="top" secondItem="GRb-UZ-tIt" secondAttribute="bottom" constant="30" id="Y59-cP-Q5q"/>
+                            <constraint firstItem="a3F-AW-SCf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aMf-wn-kgK"/>
+                            <constraint firstItem="GRb-UZ-tIt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="30" id="kep-xd-z0F"/>
+                            <constraint firstItem="EM2-Z9-NyW" firstAttribute="centerX" secondItem="GRb-UZ-tIt" secondAttribute="centerX" id="m6d-2y-dN4"/>
+                            <constraint firstItem="Zxk-Yf-fG0" firstAttribute="centerY" secondItem="EM2-Z9-NyW" secondAttribute="centerY" id="uA0-cB-O4L"/>
+                            <constraint firstItem="ilx-Gh-obD" firstAttribute="centerY" secondItem="GRb-UZ-tIt" secondAttribute="centerY" id="w5q-Ep-nQp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="code" destination="EM2-Z9-NyW" id="Q25-qo-h8Q"/>
+                        <outlet property="phone" destination="GRb-UZ-tIt" id="fhK-mB-dz5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249" y="320"/>
+        </scene>
+    </scenes>
+</document>
